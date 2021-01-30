@@ -1,0 +1,40 @@
+.Loading{
+    width:200px;
+    height:200px;
+    background-color: orange;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
+    overflow: hidden;
+}
+
+
+.Loading:before, .Loading:after{
+    content:'';
+    color: orange;
+    position: absolute;
+    width:200px;
+    height: 200px;
+    top:-60px;
+    background-color: #fff;
+
+}
+
+.Loading:before{
+    border-radius: 45%;
+    background:rgba(255,255,255,.7);
+    animation:wave 5s linear infinite;
+}
+.Loading:after{
+    border-radius: 35%;
+    background:rgba(255,255,255,.3);
+    animation:wave 5s linear infinite;
+}
+@keyframes wave{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

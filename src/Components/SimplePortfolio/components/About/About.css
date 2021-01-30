@@ -1,0 +1,63 @@
+.About{
+    color: white;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "header header header"
+    "avatar bio bio"
+    "job1 job2 job3";
+}
+
+.Job{
+    background-color: #444;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+h3, h4,h1 > span{
+    color: orange;
+}
+
+
+.Avatar{
+    grid-area: avatar;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    border: 2px solid orange;
+
+}
+
+
+.Bio{
+    grid-area: bio;
+}
+
+.Job1{
+    grid-area: job1;
+}
+
+.Job2{
+    grid-area: job2;
+
+}
+
+.Job3{
+    grid-area: job3;
+
+}
+
+
+@media only screen and (max-width: 640px){
+    .About{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "header"
+        "avatar"
+        "bio"
+        "job1"
+        "job2"
+        "job3";
+ 
+    }
+}

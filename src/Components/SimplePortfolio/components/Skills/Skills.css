@@ -1,0 +1,22 @@
+.SkillsContainer{
+    transform-style: preserve-3d;
+    margin-left: 5%;
+    perspective: 1000px;
+    height: 100vh;
+
+}
+
+
+.Chart{
+    /* transform: rotateX(45deg) rotateY(45deg); */
+    margin-top: 5%;
+    transform-style: preserve-3d;
+}
+
+
+
+@media only screen and (max-width : 640px){
+    .Chart{
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,152 @@
+.SkillSet{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    grid-template-areas: "bar logo";
+}
+
+
+.percentage{
+  grid-area: bar;
+}
+
+
+.skillName{
+  grid-area: logo;
+}
+
+
+
+
+@keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-webkit-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-moz-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-o-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  
+  .bar{
+    background-color: #444;
+    padding: 2px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  }
+  .bar::before{
+    content:  attr(data-skill);
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+  }
+
+    .bar.front::before{
+    background-color: orange;
+  }
+
+
+
+.bar.basic::before{
+    width: calc(40% - 10px);
+  }
+  .bar.intermediate::before{
+    width: calc(60% - 10px);
+  }
+  .bar.advanced::before{
+    width: calc(80% - 10px);
+  }
+
+.skillName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skillName h1{
+    font-size: 4rem;
+    animation: type 3s ease;
+    overflow: hidden;
+    white-space: wrap;
+    color: orange;
+    text-shadow: -1px -1px 1px #333,
+                0px 1px 0px #333,
+                0px 2px 0px #333,
+                0px 3px 0px #333,
+                0px 4px 0px #333,
+                0px 5px 0px #333,
+                0px 6px 0px #333,
+                0px 7px 0px #333,
+                0px 8px 0px #333,
+                0px 9px 0px #333,
+                0px 10px 0px #333,
+                0px 11px 0px #333,
+                0px 12px 0px #333,
+                0px 15px 0px #333,
+                10px 25px 35px rgba(0, 0, 0, 0.9)
+                
+
+}
+
+
+
+@keyframes moving { 100% { transform:rotate(-360deg); } }
+
+
+
+@keyframes type {
+    0%{
+        width: 0ch;
+    }
+
+    100%{
+        width: 11ch;
+    }
+}
+
+
+
+@media only screen and (max-width: 640px){
+  .SkillSet{
+    grid-template-columns: repeat(1,1fr);
+    padding: 4rem;
+    grid-template-areas: "logo"
+    "bar";
+
+  }
+
+  .percentage{
+    grid-area: bar;
+  }
+  
+  
+  .skillName{
+    grid-area: logo;
+  }
+
+  .skillName >h1{
+    font-size: 2rem;
+
+  }
+
+
+}

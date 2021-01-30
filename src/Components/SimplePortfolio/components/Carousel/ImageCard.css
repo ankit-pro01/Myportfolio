@@ -1,0 +1,33 @@
+.ImageContainer{
+    overflow: hidden;;
+}
+
+
+.ImageCard{
+    background-color: #444;
+    padding: 1rem;
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 1rem;
+    position: relative;
+    left: -500px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+
+@media only screen and (max-width: 825px) {
+    .ImageCard {
+        max-height: 250px;
+    }
+}

@@ -1,0 +1,65 @@
+.Contact{
+    height: 100vh;
+}
+
+
+
+.form {
+    max-width: 500px;
+    max-height: 500px;
+    background-color: #444;
+    padding: 1rem;
+    border-radius: 10px;
+    position: relative;
+    margin-right: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.form input{
+    margin-right: 15px;
+    height: 25px;
+    border-radius: 10px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+
+
+.form input:focus{
+    outline: none !important;
+    border: 2px solid orange;
+}
+
+.form textarea:focus {
+    outline: none !important;
+    border: 2px solid orange;
+}
+
+.form button {
+    padding: 5px;
+    background-color: orange;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.errors{
+    color: orange;
+    font-size: 80%;
+}
+
+.inline{
+    display: inline-block;
+}
+
+
+@media only screen and (max-width : 620px){
+    .form textarea{
+        width: 80%;
+    }
+}

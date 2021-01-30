@@ -1,0 +1,29 @@
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.Sidebar > div{
+    margin-top: 100%;
+}
+
+.Sidebar p {
+    cursor: pointer;
+    display: block;
+    color: white;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .active {
+    background-color: #555;
+    color: orange;
+  }
+  
+
+
+

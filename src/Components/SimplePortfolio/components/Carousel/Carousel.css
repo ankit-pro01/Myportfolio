@@ -1,0 +1,23 @@
+.CarouselConatiner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cardContainer{
+    margin-top: 4rem;
+    display: flex;
+}
+
+
+.cardContainer > p {
+    color: orange;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 2rem;
+    cursor: pointer;
+}   

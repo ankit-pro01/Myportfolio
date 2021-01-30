@@ -1,0 +1,61 @@
+.AllProjects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.projectCard{
+    background-color: #444;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 300px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.DisplayProjectContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    grid-template-areas: "projectimage projectdetails projectdetails";
+}
+
+
+.displayProjectName{    
+    grid-area: projectimage;
+}
+
+.displayProjectDetails{
+    grid-area: projectdetails;
+}
+
+
+@media only screen and (max-width: 640px){
+    .DisplayProjectContainer{
+        grid-template-areas: "projectimage projectimage projectimage"
+        "projectdetails projectdetails projectdetails";
+
+    }
+
+    .displayProjectName{
+        text-align: center;
+        max-width: 310px;
+        grid-area: projectimage;
+    }
+}
+
+
+
+
+
+.displayProjectDetails{
+    grid-area: projectdetails;
+}
+
+.displayProjectName{
+    background-color: #444;
+    grid-area: projectimage;
+}
+
+
